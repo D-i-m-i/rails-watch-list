@@ -8,7 +8,7 @@
 
   <div class="cards">
     <% @lists.each do |list| %>
-      <%= link_to list_path(list) do %>
+      <%= link_to list_path(list), class: "text-decoration-none" do %>
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path("https://images.pexels.com/photos/1117132/pexels-photo-1117132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")%>)">
       <%= list.name %> </div>
       <% end %>
@@ -16,5 +16,8 @@
   </div>
 
   <%= link_to "Create a new category", new_list_path, class: "btn btn-gradient" %>
+
+  <%= cl_image_tag("ue51jhixgon6etmyz3mv", width: 400, height: 300, crop: :fill) %>
+  <%= cl_image_tag("uhlx9ie9o0jv5xbyottl", width: 150, height: 150, crop: :thumb, gravity: :face) %>
 
 </div>
