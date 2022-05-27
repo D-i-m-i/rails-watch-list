@@ -1,0 +1,11 @@
+<%= console %>
+
+<div class="bookmark_container">
+  <h1>Bookmark a movie</h1>
+
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.input :comment, placeholder: :add_a_comment %>
+  <%= f.association :movie %>
+  <%= f.submit %>
+  <% end %>
+</div>
