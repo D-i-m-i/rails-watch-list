@@ -1,8 +1,9 @@
-<div class="list_container">
+<div class="container">
   <h1>Create a new list</h1>
 
   <%= simple_form_for(@list) do |f| %>
   <%= f.input :name, placeholder: :name %>
+   <%= f.input :photo, as: :file %>
 
   <%= f.submit %>
   <% end %>
